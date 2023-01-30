@@ -1,14 +1,17 @@
+
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("CHEESY-UI", "DarkTheme")
 
 -- Windows and sections xd
 local Main = Window:NewTab("Main")
-local Betas = Window:NewTab("Betas")
+local Fun = Window:NewTab("Fun Stuff")
 
 local Section1_1 = Main:NewSection("Main") -- Main Section
 local Section2_1 = Main:NewSection("Keybinds") -- Credits Section
 
-local Section1_2 = Main:NewSection("Betas") -- Betas Section
+local Section1_2 = Main:NewSection("Fun") -- Betas Section
+local Section2_2 = Main:NewSection("Client Sided") -- Betas Section
 
 -- Colors the thingy
 local colors = {
@@ -63,29 +66,10 @@ Section1_2:NewToggle("Fake Headless", "oooo im rich ooooo", function(state)
     end
 end)
 
-Section1_2:NewToggle("Invisible (R6 Only)", "im a ghooost oooooo", function(state)
-    
-    if state then
-        game.Players.LocalPlayer.Character.Head.Transparency = 1
-        game.Players.LocalPlayer.Character.Head.face.Transparency = 1
-        game.Players.LocalPlayer.Character["Left Arm"].Transparency = 1
-        game.Players.LocalPlayer.Character["Right Arm"].Transparency = 1
-        game.Players.LocalPlayer.Character["Left Leg"].Transparency = 1
-        game.Players.LocalPlayer.Character["Right Leg"].Transparency = 1
-        game.Players.LocalPlayer.Character["Torso"].Transparency = 1
-    else
-        game.Players.LocalPlayer.Character.Head.Transparency = 0
-        game.Players.LocalPlayer.Character.Head.face.Transparency = 0
-        game.Players.LocalPlayer.Character["Left Arm"].Transparency = 0
-        game.Players.LocalPlayer.Character["Right Arm"].Transparency = 0
-        game.Players.LocalPlayer.Character["Left Leg"].Transparency = 0
-        game.Players.LocalPlayer.Character["Right Leg"].Transparency = 0
-        game.Players.LocalPlayer.Character["Torso"].Transparency = 0
-    end
-end)
 
 
-Section:NewButton("Naked 😳", "(Stays until reset)", function()
+
+Section1_2:NewButton("Naked 😳", "(Stays until reset)", function()
     game.Players.LocalPlayer.Character.Shirt:Destroy()
     game.Players.LocalPlayer.Character.Pants:Destroy()
 end)
@@ -96,4 +80,4 @@ end)
 
 
 Section2_1:NewLabel("Tab to toggle UI")
-
+Section1_1:NewLabel("V1 😲")
